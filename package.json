@@ -35,7 +35,7 @@
     "build": "yarn generate-icons && concurrently --names 'commonjs,esm,umd' 'yarn build-commonjs' 'yarn build-esm' 'yarn build-umd'",
     "size": "size-limit",
     "clean": "git clean -Xdf",
-    "release": "np --not-tests",
+    "release": "np --no-tests",
     "deploy-docs": "cd docs && yarn install && yarn deploy",
     "postpublish": "branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD); if [[ $branch == \"master\" ]]; then yarn deploy-docs; else echo \"not on main branch, skipping docs deploy\"; fi;",
     "storybook": "start-storybook -p 6006"
