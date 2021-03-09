@@ -1,7 +1,7 @@
 {
   "name": "evergreen-v2",
   "version": "5.1.2",
-  "description": "🌲 React UI Kit by Segment 🌲",
+  "description": "React UI Kit",
   "keywords": [
     "evergreen",
     "segment",
@@ -37,7 +37,6 @@
     "clean": "git clean -Xdf",
     "release": "np --no-tests",
     "deploy-docs": "cd docs && yarn install && yarn deploy",
-    "postpublish": "branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD); if [[ $branch == \"master\" ]]; then yarn deploy-docs; else echo \"not on main branch, skipping docs deploy\"; fi;",
     "storybook": "start-storybook -p 6006"
   },
   "engines": {
